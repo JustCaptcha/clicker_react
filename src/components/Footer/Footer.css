@@ -1,0 +1,6 @@
+.Footer {
+    text-align: center;
+    border-top: 1px black solid;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
