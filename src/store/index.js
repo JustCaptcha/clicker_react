@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware, compose } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import {allReducers, paths} from './reducers'
 import reduxCookiesMiddleware from 'redux-cookies-middleware';
 import { getStateFromCookies } from 'redux-cookies-middleware';

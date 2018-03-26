@@ -3,7 +3,7 @@ import Cookies from 'js-cookie'
 import './index.css'
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux'
-import { saveCookies } from '../../../store/actions/cookies'
+import { saveCookies, deleteCookies } from '../../../store/actions/cookies'
 
 export class Options extends Component {
   render() {
@@ -12,7 +12,7 @@ export class Options extends Component {
         <p className="Cookie_panel">Cookie panel</p>
         <button onClick={this.props.saveCookies}>Save</button>
         <button onClick={this.getCookies}>Get</button>
-        <button onClick={this.deleteCookies}>Delete</button>
+        <button onClick={this.props.deleteCookies}>Delete</button>
       </div>
     )
   }
@@ -20,10 +20,10 @@ export class Options extends Component {
     console.log('GET')
     alert(Cookies.get('userState'))
   }
-  deleteCookies() {
+/*   deleteCookies() {
     console.log('DELETE')
     Cookies.remove('userState')
-  }
+  } */
 }
 
 function mapStateToProps (state) {
@@ -33,6 +33,6 @@ function mapStateToProps (state) {
 }
 
 function matchDispatchToProps (dispatch) {
-  return bindActionCreators({saveCookies: saveCookies}, dispatch)
+  return bindActionCreators({saveCookies: saveCookies, deleteCookies: deleteCookies}, dispatch)
 }
 export default connect(mapStateToProps, matchDispatchToProps)(Options)

@@ -25,6 +25,9 @@ export default (state = resources, action) => {
         break;
       case 'WOOD_DEC':
         break;
+      default: {
+          break
+      }
     }
     return state
   };

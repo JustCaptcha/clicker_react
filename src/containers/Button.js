@@ -5,7 +5,6 @@ import { woodInc } from '../store/actions'
 
 export class Button extends Component {
   render() {
-    let message = null
     return (
       <div>
         <button onClick={ () => this.props.woodInc(this.props.resources.wood)}>Add</button>
