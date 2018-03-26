@@ -6,13 +6,9 @@ import { woodInc } from '../store/actions'
 export class Button extends Component {
   render() {
     let message = null
-    if (this.props.resources.buildings.tower.show) {
-      message = <button>{this.props.resources.buildings.tower.title}</button>
-    }
     return (
       <div>
         <button onClick={ () => this.props.woodInc(this.props.resources.wood)}>Add</button>
-        {message}
       </div>
     )
   }

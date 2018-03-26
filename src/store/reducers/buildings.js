@@ -1,10 +1,6 @@
-const initialState = {
-    tower: {
-        id: 0
-    }
-}
+import buildings from '../data/buildings'
 
-export default (state = initialState, action) => {
+export default (state = buildings, action) => {
   switch (action.type) {
 
   case 'INC':

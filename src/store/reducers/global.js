@@ -1,14 +1,13 @@
-const initialState = {
-    seconds: 0
-}
+import global from '../data/global'
 
-export default (state = initialState, action) => {
+
+export default (state = global, action) => {
   switch (action.type) {
 
   case 'TIME_INC':
     return {
       ...state,
-      seconds: state.seconds += 1
+      seconds: state.time_seconds += 1
     }
 
   default:

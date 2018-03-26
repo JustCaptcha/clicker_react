@@ -1,23 +1,9 @@
-const resources = {
-    wood: 0,
-    food: 0,
-    stone: 0,
-    buildings: {
-        tower: {
-            title: 'Wooden tower',
-            count: 0,
-            show: false,
-            cost: {
-                wood: 30
-            }
-        }
-    }
-}
+import resources from '../data/resources'
 
 export default (state = resources, action) => {
     switch (action.type) {
       case 'WOOD_INC':
-        if (state.wood === 10) {
+/*         if (state.wood === 10) {
             state = {
                 ...state,
                 buildings: {
@@ -31,7 +17,7 @@ export default (state = resources, action) => {
                     }
                 }
             }
-        }
+        } */
         state = {
           ...state,
           wood: resources.wood += 1

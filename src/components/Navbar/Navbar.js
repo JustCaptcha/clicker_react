@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import './Navbar.css'
+import Options from './Options/'
 
 class Navbar extends Component {
 
     render() {
         return(
-            <div className='Navbar'>Navbar</div>
+            <div className='Navbar'>
+            <Options />
+            </div>
         )
     }
 }
