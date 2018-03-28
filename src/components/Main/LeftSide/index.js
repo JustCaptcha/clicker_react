@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import Stats from './Stats/Stats'
+import './index.css'
+import Stats from './Stats'
 
 export class LeftSide extends Component {
   render() {
     return (
-      <div>
+      <div className='LeftSide'>
         <Stats />
       </div>
     )

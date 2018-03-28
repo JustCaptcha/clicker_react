@@ -3,7 +3,7 @@ import Cookies from 'js-cookie'
 import './index.css'
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux'
-import { saveCookies, deleteCookies } from '../../../store/actions/cookies'
+import { saveCookies, deleteCookies } from '../../store/actions/cookies'
 
 export class Options extends Component {
   render() {
@@ -18,7 +18,7 @@ export class Options extends Component {
   }
   getCookies() {
     console.log('GET')
-    alert(Cookies.get('userState'))
+    alert(Cookies.get('wood'))
   }
 /*   deleteCookies() {
     console.log('DELETE')

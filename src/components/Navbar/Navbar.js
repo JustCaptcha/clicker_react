@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Navbar.css'
-import Options from './Options/'
+import Options from '../../containers/Options/'
 
 class Navbar extends Component {
 

@@ -6,9 +6,7 @@ export class StatsRes extends Component {
   render() {
     return (
       <div>
-        <ul>
-            <li>wood: {this.props.resources.wood}</li>
-        </ul>
+        <div>wood: {this.props.resources.wood}</div>
       </div>
     )
   }

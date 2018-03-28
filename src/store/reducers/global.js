@@ -7,7 +7,7 @@ export default (state = global, action) => {
   case 'TIME_INC':
     return {
       ...state,
-      seconds: state.time_seconds += 1
+      time_seconds: state.time_seconds += 1
     }
 
   default:

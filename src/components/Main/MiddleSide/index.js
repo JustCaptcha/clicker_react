@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Actions from './Actions/Actions'
+import Actions from './Actions/'
 import './index.css'
 
 export class MiddleSide extends Component {

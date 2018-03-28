@@ -14,7 +14,7 @@ export class Time extends Component {
   render() {
     return (
       <div>
-        <p>Time: {this.props.global.seconds} seconds</p>
+        <p>Time: {this.props.global.time_seconds} seconds</p>
       </div>
     )
   }
