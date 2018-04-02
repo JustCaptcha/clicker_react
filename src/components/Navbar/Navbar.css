@@ -1,5 +1,14 @@
 .Navbar {
     /* text-align: center; */
+    display: inline-flex;
     padding: 0px 20px 0px 20px;
     border-bottom: 1px black solid;
+    
+}
+.Navbar > .header {
+    margin-bottom: 0;
+    margin-right: 2rem;
+}
+.Navbar > .header:first-child {
+    margin-top: 0;
 }

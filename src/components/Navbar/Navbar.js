@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import './Navbar.css'
-import Options from '../../containers/Options/'
+import { Header } from 'semantic-ui-react'
+import CookiePanel from '../../containers/CookiePanel/'
 
 class Navbar extends Component {
 
     render() {
         return(
             <div className='Navbar'>
-            <Options />
+            <Header as='h4'>Clicker-react</Header>
+            <CookiePanel />
             </div>
         )
     }

@@ -5,20 +5,22 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux'
 import { saveCookies, deleteCookies } from '../../store/actions/cookies'
 
-export class Options extends Component {
+import { Button } from 'semantic-ui-react'
+
+export class CookiePanel extends Component {
   render() {
     return (
       <div>
-        <p className="Cookie_panel">Cookie panel</p>
-        <button onClick={this.props.saveCookies}>Save</button>
-        <button onClick={this.getCookies}>Get</button>
-        <button onClick={this.props.deleteCookies}>Delete</button>
+        <p className="CookiePanel">Cookie panel</p>
+        <Button size='mini' onClick={this.props.saveCookies}>Save</Button>
+        <Button size='mini' onClick={this.getCookies}>Get</Button>
+        <Button size='mini' onClick={this.props.deleteCookies}>Delete</Button>
       </div>
     )
   }
   getCookies() {
     console.log('GET')
-    alert(Cookies.get('wood'))
+    alert('Time: ' + Cookies.get('global_time_seconds'))
   }
 /*   deleteCookies() {
     console.log('DELETE')
@@ -35,4 +37,4 @@ function mapStateToProps (state) {
 function matchDispatchToProps (dispatch) {
   return bindActionCreators({saveCookies: saveCookies, deleteCookies: deleteCookies}, dispatch)
 }
-export default connect(mapStateToProps, matchDispatchToProps)(Options)
+export default connect(mapStateToProps, matchDispatchToProps)(CookiePanel)

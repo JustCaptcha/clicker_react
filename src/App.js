@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux'
 import store from './store'
+import 'semantic-ui-css/semantic.min.css'
 import './App.css';
 import Navbar from './components/Navbar/Navbar'
 import Main from './components/Main/Main'
