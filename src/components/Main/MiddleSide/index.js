@@ -15,13 +15,17 @@ export class MiddleSide extends Component {
     )
   }
 }
-const panes = [
+let panes = [
   { menuItem: 'Actions', render: () => 
   <Tab.Pane attached={false}>
   <Actions />
   </Tab.Pane> },
-  { menuItem: 'Buildings', render: () => <Tab.Pane attached={false}>Tab 2 Content</Tab.Pane> },
-  { menuItem: 'Stats', render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane> },
+  { menuItem: 'Buildings', render: () => <Tab.Pane attached={false}>
+  Tab 2 Content
+  </Tab.Pane> },
+  { menuItem: 'Stats', render: () => <Tab.Pane attached={false}>
+  Tab 3 Content
+  </Tab.Pane> },
   
 ]
 

@@ -9,7 +9,7 @@ import events from './events'
 export const paths = {
     'global.time_seconds': {name: 'global_time_seconds'},
     'global.game_over': {name: 'global_game_over'},
-    'resources.wood': {name: 'wood'},
+    'resources.credits': {name: 'resources.credits'},
     'resources.food': {name: 'food'},
     'resources.stone': {name: 'stone'},
     'resources.manpower': {name: 'manpower'},

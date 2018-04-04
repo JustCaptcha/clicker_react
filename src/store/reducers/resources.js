@@ -2,7 +2,7 @@ import resources from '../data/resources'
 
 export default (state = resources, action) => {
     switch (action.type) {
-      case 'WOOD_INC':
+      case 'CREDITS_INC':
 /*         if (state.wood === 10) {
             state = {
                 ...state,
@@ -20,10 +20,11 @@ export default (state = resources, action) => {
         } */
         state = {
           ...state,
-          wood: resources.wood += 1
+          credits: resources.credits += 0.0000001
+          
         }
         break;
-      case 'WOOD_DEC':
+      case 'CREDITS_DEC':
         break;
       default: {
           break

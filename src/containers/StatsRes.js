@@ -2,15 +2,15 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 export class StatsRes extends Component {
-  
   render() {
     return (
       <div>
-        <div>wood: {this.props.resources.wood}</div>
+        <div>credits: {(this.props.resources.credits).toFixed(7)}</div>
       </div>
     )
   }
 }
+
 
 function mapStateToProps (state) {
     return {

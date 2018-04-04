@@ -1,6 +1,6 @@
-export const woodInc = (wood) => {
+export const CreditsInc = (wood) => {
     return {
-        type: 'WOOD_INC',
+        type: 'CREDITS_INC',
         payload: wood
     }
 }
