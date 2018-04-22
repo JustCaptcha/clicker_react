@@ -5,6 +5,7 @@ import global from './global'
 import resources from './resources'
 import buildings from './buildings'
 import actions from './actions'
+import defaultActions from '../data/actions';
 import events from './events'
 
 export const paths = {
@@ -20,12 +21,14 @@ export const paths = {
     'buildings.tower.count': {name: 'tower_count'},
 }
 
-export const allReducers = combineReducers({
-    cookies: cookies,
-    global: global,
-    actions: actions,
-    resources: resources,
-    buildings: buildings,
-    events: events,
+export const allReducers = (state, action) => (
+    combineReducers({
+        actions: (state) => state || defaultActions,
+        cookies: cookies,
+        global: global,
+        resources: resources,
+        buildings: buildings,
+        events: events,
 
-})
+    })(actions(state, action), action)
+);
