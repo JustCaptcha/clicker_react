@@ -24,8 +24,23 @@ export default (state = resources, action) => {
           
         }
         break;
+      case 'ELECTRICITY_INC':
+          state = {
+              ...state,
+              electricity: state.electricity + 1
+          };
+          break;
+      case 'DRILL':
+          if (state.electricity >= 10) {
+              state = {
+                  ...state,
+                  electricity: state.electricity - 10,
+                  metal: state.metal + 1,
+              };
+          }
+          break;
       case 'CREDITS_DEC':
-        break;
+          break;
       default: {
           break
       }

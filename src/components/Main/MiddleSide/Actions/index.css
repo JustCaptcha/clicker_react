@@ -1,0 +1,7 @@
+.Actions__item {
+    margin-bottom: 20px;
+}
+
+.Actions__item:last-of-type {
+    margin-bottom: 0;
+}

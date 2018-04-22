@@ -6,6 +6,8 @@ export class StatsRes extends Component {
     return (
       <div>
         <div>credits: {(this.props.resources.credits).toFixed(7)}</div>
+        <div>electricity: {(this.props.resources.electricity)}</div>
+        <div>metal: {(this.props.resources.metal)}</div>
       </div>
     )
   }

@@ -4,6 +4,7 @@ import cookies from './cookies'
 import global from './global'
 import resources from './resources'
 import buildings from './buildings'
+import actions from './actions'
 import events from './events'
 
 export const paths = {
@@ -22,6 +23,7 @@ export const paths = {
 export const allReducers = combineReducers({
     cookies: cookies,
     global: global,
+    actions: actions,
     resources: resources,
     buildings: buildings,
     events: events,

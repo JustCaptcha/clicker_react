@@ -12,7 +12,7 @@ export class ButtonMy extends Component {
   render() {
     return (
       <div>
-        <Button onClick={ () => this.props.CreditsInc(this.credits)}>Add</Button>
+        <Button onClick={ () => this.props.CreditsInc(this.credits)}>{this.props.text}</Button>
       </div>
     )
   }
