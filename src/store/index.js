@@ -17,3 +17,16 @@ const store = createStore (
 )
 
 export default store
+
+function update() {
+    store.dispatch({
+        type: 'UPDATE_ACTIONS',
+        payload: {
+            time: Date.now()
+        }
+    });
+
+    setTimeout(update, 100);
+}
+
+update();

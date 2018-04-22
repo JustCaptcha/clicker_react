@@ -5,3 +5,12 @@
 .Actions__item:last-of-type {
     margin-bottom: 0;
 }
+
+.Actions__progress {
+    transition: width 0.1s linear;
+    position: relative;
+    top: 8px;
+    height: 20px;
+    background: green;
+    float: right;
+}

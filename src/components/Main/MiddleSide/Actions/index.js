@@ -8,15 +8,22 @@ export class Actions extends Component {
     return (
       Object.keys(this.props.list).map(key =>
           <div className="Actions__item" key={key}>
-              <Button onClick={() => this.act(this.props.list[key].action)}>
+              <Button onClick={() => this.act(key)}>
                   {this.props.list[key].title}</Button>
+              <div className="Actions__progress" style={{width: this.props.list[key].completeValue * 50 + '%'}}></div>
           </div>
       )
     )
   }
 
-  act(action) {
-      store.dispatch(action)
+  act(key) {
+      store.dispatch({
+          type: 'ACTIVATE_ACTION',
+          payload: {
+              key,
+              time: Date.now()
+          }
+      })
   }
 }
 
