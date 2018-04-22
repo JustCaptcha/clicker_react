@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './Main.css'
 import LeftSide from './LeftSide'
-import MiddleSide from './MiddleSide'
+import MiddleSide from '../../containers/MiddleSide';
 import RightSide from './RightSide'
 
 class Main extends Component {
