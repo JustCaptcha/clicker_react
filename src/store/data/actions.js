@@ -1,11 +1,11 @@
-import {ElectricityInc, DrillMetal, DrillCopper, MeltMetal, MeltCopper} from '../actions/actions';
+import {ElectricityInc, DrillMetal, DrillCopper, DrillGold, MeltMetal, MeltCopper, MeltGold} from '../actions/actions';
 
 const actions = {
     dinamo: {
         title: 'Get electricity from dinamo',
         show: true,
-        time: 5000,
-        action: ElectricityInc(1)
+        time: 1000,
+        action: ElectricityInc(5)
     },
     drillMetal: {
         title: 'Drill for metal',
@@ -19,6 +19,12 @@ const actions = {
         time: 5000,
         action: DrillCopper(10, 1)
     },
+    drillGold: {
+        title: 'Drill for gold',
+        show: true,
+        time: 5000,
+        action: DrillGold(10, 1)
+    },
     meltMetal: {
         title: 'Melt metal',
         show: true,
@@ -30,6 +36,12 @@ const actions = {
         show: true,
         time: 5000,
         action: MeltCopper(10, 1)
+    },
+    meltGold: {
+        title: 'Melt gold',
+        show: true,
+        time: 5000,
+        action: MeltGold(10, 1)
     }
 }
 

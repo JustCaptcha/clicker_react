@@ -1,11 +1,12 @@
+import {BuildMelter} from '../actions/buldings'
+
 const buildings = {
-    tower: {
-        title: 'Wooden tower',
-        show: false,
-        cost: {
-            wood: 100,
-        },
-        count: 0
+    melter: {
+        title: 'Build melter',
+        show: true,
+        time: 5000,
+        count: 0,
+        action: BuildMelter(1, 1)
     }
 }
 

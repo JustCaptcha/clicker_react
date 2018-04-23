@@ -1,4 +1,5 @@
 import resourcesReducer from '../reducers/resources';
+import buildingsReducer from '../reducers/buildings';
 
 export default (state, action) => {
     switch (action.type) {
@@ -44,6 +45,21 @@ export default (state, action) => {
                     return item;
                 }),
                 resources
+            };
+        case 'BUILDINGS_ACTION':
+            let buildings = {...state.buildings};
+            return {
+                ...state,
+                buildings: Object.keys(state.buildings).map(key => {
+                    const item = state.buildings[key];
+                    buildings = buildingsReducer(buildings, item.action);
+/*                     return {
+                        ...item,
+                    } */
+                    return item;
+                }),
+                buildings
+
             };
         default:
             return state

@@ -6,8 +6,10 @@ const resources = {
     manpower: 0,
     rawMetal: 0,
     rawCopper: 0,
+    rawGold: 0,
     metal: 0,
     copper: 0,
+    gold: 0,
 }
 
 export default resources

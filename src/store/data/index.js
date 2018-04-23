@@ -1,10 +1,10 @@
 import global from './global'
 import resources from './resources'
-import buildings from './buildings'
+// import buildings from './buildings'
 
 const state_all = {
     global,
-    buildings,
+    // buildings,
     resources,
 }
 
