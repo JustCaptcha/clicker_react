@@ -48,7 +48,7 @@ const actions = {
         show: true,
         time: 5000,
         preAction: ChangeResource(resourcesNames.rawGold, -10),
-        action: ChangeResource(resourcesNames.metal, 1)
+        action: ChangeResource(resourcesNames.gold, 1)
     }
 }
 

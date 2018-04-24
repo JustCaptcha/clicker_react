@@ -18,7 +18,7 @@ const store = createStore (
 
 export default store
 
-function update() {
+function update(time) {
     store.dispatch({
         type: 'UPDATE_ACTIONS',
         payload: {
@@ -29,4 +29,16 @@ function update() {
     setTimeout(update, 100);
 }
 
+function cookies__save() {
+    store.dispatch({
+        type: 'COOKIES_SAVE',
+        payload: {
+            time: Date.now()
+        }
+    })
+
+    setTimeout(cookies__save, 10000)
+}
+
 update();
+cookies__save();

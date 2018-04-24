@@ -26,4 +26,13 @@ const resources = {
     [resourcesNames.gold]: 0,
 }
 
+function resourcesNamesArr() {
+    let names = []
+    Object.keys(resourcesNames).map( key => {
+        const item = resourcesNames[key]
+        names.push(item)
+    })
+    return names
+}
+
 export default resources

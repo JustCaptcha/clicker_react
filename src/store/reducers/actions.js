@@ -1,5 +1,6 @@
 import resourcesReducer from '../reducers/resources';
 import buildingsReducer from '../reducers/buildings';
+import cookieReducer from '../reducers/cookies';
 
 const checkPreAction = {
     CHANGE_RESOURCE: ({resources}, {resource, value}) => !(value < 0 && resources[resource] + value < 0)
@@ -9,6 +10,9 @@ export default (state, action) => {
     let resources = state.resources;
 
     switch (action.type) {
+        case 'COOKIE_ACTION':
+            // cookieReducer(state, )
+            // const item = state.actions[action.payload.key]
         case 'ACTIVATE_ACTION':
             const item = state.actions[action.payload.key];
 

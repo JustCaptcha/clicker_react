@@ -1,12 +1,11 @@
 import Cookies from 'js-cookie'
 
-import state_all from '../data'
-import global from '../data/global'
+// import state_all from '../data'
+import {resourcesNames} from '../data/resources'
 
-export default (state = state_all, action) => {
+export default (state, action) => {
     switch(action.type) {
         case 'COOKIES_SAVE': {
-            // Cookies.set('wood', state.resources.wood)
             addCookies(state)
             return state
             break
@@ -29,13 +28,32 @@ export default (state = state_all, action) => {
 }
 
 function addCookies(state) {
+    console.log('Cookies saved!')
+    let resNames = getResNames(resourcesNames)
+    // Names array
+    let i = 0
+    Object.keys(state.resources).map(key => {
+        const item = state.resources[key]
+        Cookies.set(resNames[i], item)
+        i += 1
+    })
     Cookies.set('global_time_seconds', state.global.time_seconds)
-    Cookies.set('resources.credits', state.resources.credits)
-    Cookies.set('stone', state.resources.stone)
 }
 
 function removeCookies(state) {
+    // let resNames = getResNames()
+    Object.keys(resourcesNames).map(key => {
+        const item = resourcesNames[key]
+        Cookies.remove(item)
+    })
     Cookies.remove('global_time_seconds')
-    Cookies.remove('resources.credits')
-    Cookies.remove('stone')
+}
+
+function getResNames(element) {
+    let array = []
+    Object.keys(element).map(key => {
+        const item = element[key]
+        array.push(item)
+    })
+    return array
 }
