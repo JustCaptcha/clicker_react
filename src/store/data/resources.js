@@ -1,15 +1,29 @@
+export const resourcesNames = {
+    electricity: 'electricity',
+    credits: 'credits',
+    stone: 'stone',
+    food: 'food',
+    manpower: 'manpower',
+    rawMetal: 'rawMetal',
+    rawCopper: 'rawCopper',
+    rawGold: 'rawGold',
+    metal: 'metal',
+    copper: 'copper',
+    gold: 'gold'
+}
+
 const resources = {
-    electricity: 0,
-    credits: 0.0,
-    stone: 0,
-    food: 0,
-    manpower: 0,
-    rawMetal: 0,
-    rawCopper: 0,
-    rawGold: 0,
-    metal: 0,
-    copper: 0,
-    gold: 0,
+    [resourcesNames.electricity]: 0,
+    [resourcesNames.credits]: 0.0,
+    [resourcesNames.stone]: 0,
+    [resourcesNames.food]: 0,
+    [resourcesNames.manpower]: 0,
+    [resourcesNames.rawMetal]: 0,
+    [resourcesNames.rawCopper]: 0,
+    [resourcesNames.rawGold]: 0,
+    [resourcesNames.metal]: 0,
+    [resourcesNames.copper]: 0,
+    [resourcesNames.gold]: 0,
 }
 
 export default resources

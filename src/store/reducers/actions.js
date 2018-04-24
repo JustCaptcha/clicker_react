@@ -1,23 +1,42 @@
 import resourcesReducer from '../reducers/resources';
 import buildingsReducer from '../reducers/buildings';
 
+const checkPreAction = {
+    CHANGE_RESOURCE: ({resources}, {resource, value}) => value < 0 && resources[resource] + value < 0
+}
+
 export default (state, action) => {
+    let resources = state.resources;
+
     switch (action.type) {
         case 'ACTIVATE_ACTION':
+            const item = state.actions[action.payload.key];
+
+            if (item.isActive) {
+                return state;
+            }
+
+            if (item.preAction) {
+                if (!checkPreAction[item.preAction.type](state, item.preAction.payload)) {
+                    return state;
+                }
+
+                resources = resourcesReducer(resources, item.preAction);
+            }
+
             return {
                 ...state,
                 actions: {
                     ...state.actions,
                     [action.payload.key]: {
-                        ...state.actions[action.payload.key],
+                        ...item,
                         isActive: true,
                         startTime: action.payload.time
                     }
-                }
+                },
+                resources
             };
         case 'UPDATE_ACTIONS':
-            let resources = {...state.resources};
-
             return {
                 ...state,
                 actions: Object.keys(state.actions).map(key => {
@@ -57,8 +76,7 @@ export default (state, action) => {
                         ...item,
                     } */
                     return item;
-                }),
-                buildings
+                })
 
             };
         default:

@@ -3,7 +3,7 @@ import { combineReducers } from 'redux'
 import cookies from './cookies'
 import global from './global'
 import resources from './resources'
-import buildings from './buildings'
+// import buildings from './buildings'
 import actions from './actions'
 import defaultActions from '../data/actions';
 import defaultBuildings from '../data/buildings'
