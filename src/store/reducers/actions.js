@@ -2,7 +2,7 @@ import resourcesReducer from '../reducers/resources';
 import buildingsReducer from '../reducers/buildings';
 
 const checkPreAction = {
-    CHANGE_RESOURCE: ({resources}, {resource, value}) => value < 0 && resources[resource] + value < 0
+    CHANGE_RESOURCE: ({resources}, {resource, value}) => !(value < 0 && resources[resource] + value < 0)
 }
 
 export default (state, action) => {
